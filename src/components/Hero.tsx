@@ -1,10 +1,7 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
+  return <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] items-center">
           
@@ -19,7 +16,7 @@ const Hero = () => {
 
               {/* Main Headline */}
               <div className="space-y-3 lg:space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight">
+                <h1 className="sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight text-4xl">
                   El futuro de la
                   <span className="block">alimentación</span>
                   <span className="block text-nutinova-asparagus">saludable</span>
@@ -64,11 +61,7 @@ const Hero = () => {
           <div className="lg:col-span-6 xl:col-span-7 relative order-2 lg:order-2">
             <div className="relative h-80 sm:h-96 lg:h-[600px] bg-modern-gray-100 rounded-2xl lg:rounded-3xl overflow-hidden">
               {/* Full frame image with overlay elements */}
-              <img 
-                src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" 
-                alt="Nutinova Foods Product" 
-                className="absolute inset-0 w-full h-full object-cover object-center" 
-              />
+              <img src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" alt="Nutinova Foods Product" className="absolute inset-0 w-full h-full object-cover object-center" />
               
               {/* Overlay gradient for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
@@ -92,8 +85,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
