@@ -6,70 +6,70 @@ const Hero = () => {
   return (
     <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] items-center">
           
           {/* Content - Left Side */}
-          <div className="lg:col-span-6 xl:col-span-5 pt-8 lg:pt-0">
-            <div className="space-y-8">
+          <div className="lg:col-span-6 xl:col-span-5 pt-4 lg:pt-0 order-1 lg:order-1">
+            <div className="space-y-6 lg:space-y-8">
               
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-modern-gray-100 rounded-full">
-                <span className="text-modern-gray-600 text-sm font-medium">Líder en Alimentación Saludable</span>
+              <div className="inline-flex items-center px-3 py-1.5 lg:px-4 lg:py-2 bg-modern-gray-100 rounded-full">
+                <span className="text-modern-gray-600 text-xs sm:text-sm font-medium">Líder en Alimentación Saludable</span>
               </div>
 
               {/* Main Headline */}
-              <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight">
+              <div className="space-y-4 lg:space-y-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight">
                   El futuro de la
                   <span className="block">alimentación</span>
                   <span className="block text-nutinova-asparagus">saludable</span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl text-modern-gray-600 leading-relaxed max-w-lg">
+                <p className="text-base sm:text-lg lg:text-xl text-modern-gray-600 leading-relaxed max-w-lg">
                   Productos veganos, sin gluten y sin azúcar que transforman 
                   la experiencia alimentaria sin comprometer el sabor.
                 </p>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-modern-gray-900 hover:bg-modern-gray-800 text-white px-8 py-4 text-lg rounded-xl group"
+                  className="bg-modern-gray-900 hover:bg-modern-gray-800 text-white px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl group"
                 >
                   Ver Productos
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 px-8 py-4 text-lg rounded-xl"
+                  className="border-2 border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl"
                 >
                   Nuestra Historia
                 </Button>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-modern-gray-200">
+              <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-6 lg:pt-8 border-t border-modern-gray-200">
                 <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">100%</div>
-                  <div className="text-sm text-modern-gray-600">Vegano</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-modern-gray-900">100%</div>
+                  <div className="text-xs sm:text-sm text-modern-gray-600">Vegano</div>
                 </div>
                 <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">0%</div>
-                  <div className="text-sm text-modern-gray-600">Gluten</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-modern-gray-900">0%</div>
+                  <div className="text-xs sm:text-sm text-modern-gray-600">Gluten</div>
                 </div>
                 <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">2024</div>
-                  <div className="text-sm text-modern-gray-600">Fundada</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-modern-gray-900">2024</div>
+                  <div className="text-xs sm:text-sm text-modern-gray-600">Fundada</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Visual - Right Side */}
-          <div className="lg:col-span-6 xl:col-span-7 relative">
-            <div className="relative h-64 sm:h-80 lg:h-[600px] bg-modern-gray-100 rounded-3xl overflow-hidden">
+          <div className="lg:col-span-6 xl:col-span-7 relative order-2 lg:order-2">
+            <div className="relative h-96 sm:h-[400px] lg:h-[600px] bg-modern-gray-100 rounded-2xl lg:rounded-3xl overflow-hidden">
               {/* Full frame image with overlay elements */}
               <img 
                 src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" 
@@ -80,20 +80,20 @@ const Hero = () => {
               {/* Overlay gradient for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
               
-              {/* Text overlay - Better centered */}
-              <div className="absolute inset-x-0 bottom-8 flex justify-center">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 mx-8 max-w-sm w-full text-center">
-                  <div className="text-modern-gray-700 text-xl font-bold">Nutinova Foods</div>
-                  <div className="text-modern-gray-500 text-base">Alimentación Saludable</div>
+              {/* Text overlay - Optimized for mobile */}
+              <div className="absolute inset-x-0 bottom-4 sm:bottom-6 lg:bottom-8 flex justify-center px-4">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl p-3 sm:p-4 lg:p-6 max-w-xs sm:max-w-sm w-full text-center">
+                  <div className="text-modern-gray-700 text-lg sm:text-xl lg:text-xl font-bold">Nutinova Foods</div>
+                  <div className="text-modern-gray-500 text-sm sm:text-base lg:text-base">Alimentación Saludable</div>
                 </div>
               </div>
               
-              {/* Floating elements */}
-              <div className="absolute top-8 right-8 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                <span className="text-2xl">🌱</span>
+              {/* Floating elements - Optimized for mobile */}
+              <div className="absolute top-3 sm:top-4 lg:top-8 right-3 sm:right-4 lg:right-8 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-xl lg:rounded-2xl shadow-lg flex items-center justify-center">
+                <span className="text-lg sm:text-xl lg:text-2xl">🌱</span>
               </div>
-              <div className="absolute top-8 left-8 w-20 h-12 bg-nutinova-moonstone rounded-xl flex items-center justify-center">
-                <span className="text-white text-sm font-medium">Sin Gluten</span>
+              <div className="absolute top-3 sm:top-4 lg:top-8 left-3 sm:left-4 lg:left-8 w-16 h-8 sm:w-18 sm:h-9 lg:w-20 lg:h-12 bg-nutinova-moonstone rounded-lg lg:rounded-xl flex items-center justify-center">
+                <span className="text-white text-xs sm:text-sm lg:text-sm font-medium">Sin Gluten</span>
               </div>
             </div>
           </div>
