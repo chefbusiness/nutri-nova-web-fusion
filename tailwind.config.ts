@@ -53,7 +53,23 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Nutinova Corporate Colors
+				// Modern neutral palette
+				modern: {
+					white: '#ffffff',
+					gray: {
+						50: '#f8f9fa',
+						100: '#e9ecef',
+						200: '#dee2e6',
+						300: '#ced4da',
+						400: '#adb5bd',
+						500: '#6c757d',
+						600: '#495057',
+						700: '#343a40',
+						800: '#212529',
+						900: '#000000'
+					}
+				},
+				// Nutinova accent colors (used sparingly)
 				nutinova: {
 					beige: '#e4e7cd',
 					pistachi: '#bfd57e', 
@@ -62,10 +78,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				'nilland': ['Nilland', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
-				'playwrite': ['Playwrite DE Grund', 'cursive'],
-				'sans': ['Poppins', 'sans-serif'], // Set Poppins as default sans
+				'sans': ['Inter', 'sans-serif'], // Set Inter as default
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -90,29 +105,19 @@ export default {
 					}
 				},
 				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-in': {
-					'0%': { opacity: '0', transform: 'translateX(-30px)' },
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
 					'100%': { opacity: '1', transform: 'translateX(0)' }
-				},
-				'bounce-gentle': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-5px)' }
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in': 'slide-in 0.8s ease-out',
-				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'slide-in': 'slide-in 0.8s ease-out'
 			}
 		}
 	},

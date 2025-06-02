@@ -1,133 +1,114 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { useState } from 'react';
 import { Lightbulb, Leaf, Heart, Users } from 'lucide-react';
 
 const About = () => {
-  const [hoveredValue, setHoveredValue] = useState<string | null>(null);
-
   const values = [
     {
-      id: 'innovacion',
       title: 'Innovación',
       icon: Lightbulb,
-      description: 'Constante búsqueda de nuevas formas de mejorar y crear productos alimenticios alternativos.',
-      examples: 'Desarrollo de alternativas veganas que mantienen sabor y textura excepcionales.'
+      description: 'Desarrollo constante de alternativas alimentarias que mantienen sabor excepcional.'
     },
     {
-      id: 'sostenibilidad',
       title: 'Sostenibilidad',
       icon: Leaf,
-      description: 'Compromiso con prácticas que respetan el medio ambiente y reducen la huella de carbono.',
-      examples: 'Uso de ingredientes orgánicos y procesos de producción eco-amigables.'
+      description: 'Prácticas eco-amigables y reducción de huella de carbono en cada proceso.'
     },
     {
-      id: 'salud',
-      title: 'Salud y Bienestar',
+      title: 'Salud',
       icon: Heart,
-      description: 'Fomento de un estilo de vida saludable mediante productos nutritivos y deliciosos.',
-      examples: 'Productos libres de gluten, azúcar y alérgenos comunes para todas las necesidades.'
+      description: 'Productos nutritivos libres de gluten, azúcar y alérgenos comunes.'
     },
     {
-      id: 'inclusividad',
       title: 'Inclusividad',
       icon: Users,
-      description: 'Provisión de opciones para todos, independientemente de restricciones dietéticas.',
-      examples: 'Líneas de productos aptas para veganos, celíacos y diabéticos.'
+      description: 'Opciones para todos, sin importar restricciones dietéticas.'
     }
   ];
 
   return (
-    <section id="sobre" className="py-16 sm:py-24 lg:py-48 bg-gradient-to-br from-white via-nutinova-beige/10 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Mission & Vision */}
-        <div className="text-center mb-16 sm:mb-24 lg:mb-32 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 sm:px-6 py-3 bg-nutinova-moonstone/10 border border-nutinova-moonstone/20 rounded-full mb-8 sm:mb-12">
-            <span className="text-nutinova-moonstone font-medium text-sm sm:text-base lg:text-lg">Sobre Nutinova Foods</span>
-          </div>
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-nutinova-asparagus mb-8 sm:mb-12 lg:mb-16 leading-tight px-4">
-            Construyendo el 
-            <span className="block bg-gradient-to-r from-nutinova-moonstone to-nutinova-pistachi bg-clip-text text-transparent">
-              Futuro de la Alimentación
-            </span>
+    <section id="sobre" className="py-24 lg:py-32 bg-modern-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modern-gray-900 mb-6">
+            Construyendo el futuro de la alimentación
           </h2>
-          
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 max-w-7xl mx-auto mt-12 sm:mt-16 lg:mt-20">
-            <Card className="group bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-nutinova-moonstone to-nutinova-pistachi"></div>
-              <CardContent className="p-6 sm:p-8 lg:p-12">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-nutinova-moonstone mb-4 sm:mb-6 lg:mb-8">Nuestra Misión</h3>
-                <p className="text-gray-600 leading-relaxed text-base sm:text-lg lg:text-xl font-light">
-                  Proporcionar productos alimenticios saludables que promuevan el bienestar y la sostenibilidad, 
-                  satisfaciendo las necesidades de consumidores que buscan opciones veganas y libres de alérgenos, 
-                  manteniendo los más altos estándares de calidad.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="group bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-nutinova-asparagus to-nutinova-moonstone"></div>
-              <CardContent className="p-6 sm:p-8 lg:p-12">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-nutinova-moonstone mb-4 sm:mb-6 lg:mb-8">Nuestra Visión</h3>
-                <p className="text-gray-600 leading-relaxed text-base sm:text-lg lg:text-xl font-light">
-                  Ser reconocida globalmente como pionera en la fabricación de alimentos saludables y alternativos, 
-                  influyendo en la industria alimentaria hacia prácticas más sostenibles y conscientes, 
-                  comenzando por el mercado estadounidense.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <p className="text-lg sm:text-xl text-modern-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Empresa mexicana pionera en productos veganos, sin gluten y sin azúcar, 
+            comprometida con la innovación y sostenibilidad.
+          </p>
         </div>
 
-        {/* Corporate Values */}
-        <div className="animate-slide-in mb-16 sm:mb-24 lg:mb-32">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-nutinova-asparagus mb-12 sm:mb-16 lg:mb-20">
-            Nuestros Valores Corporativos
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {values.map((value, index) => (
-              <div key={value.id} className="relative">
-                <Card 
-                  className="h-full cursor-pointer transition-all duration-500 hover:scale-105 hover:shadow-2xl border-0 bg-white/80 backdrop-blur-sm shadow-lg group overflow-hidden"
-                  onMouseEnter={() => setHoveredValue(value.id)}
-                  onMouseLeave={() => setHoveredValue(null)}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/30 via-transparent to-nutinova-pistachi/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-6 sm:p-8 lg:p-10 text-center h-full flex flex-col justify-center relative z-10">
-                    <div className="flex justify-center mb-6 sm:mb-8">
-                      <div className="p-3 sm:p-4 bg-nutinova-asparagus/10 rounded-2xl group-hover:bg-nutinova-asparagus/20 transition-colors duration-300">
-                        <value.icon className="h-8 w-8 sm:h-10 w-10 text-nutinova-asparagus" />
-                      </div>
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-nutinova-asparagus mb-4 sm:mb-6">{value.title}</h4>
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg font-light">{value.description}</p>
-                  </CardContent>
-                </Card>
-                
-                {/* Hover popup - hidden on mobile */}
-                {hoveredValue === value.id && (
-                  <div className="hidden lg:block absolute top-full left-1/2 transform -translate-x-1/2 mt-6 z-20 bg-nutinova-asparagus text-white p-6 rounded-xl shadow-2xl max-w-xs animate-fade-in">
-                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-nutinova-asparagus rotate-45"></div>
-                    <p className="text-sm font-medium leading-relaxed">{value.examples}</p>
-                  </div>
-                )}
+        {/* Bento Grid Layout */}
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 mb-16 lg:mb-24">
+          
+          {/* Mission - Large Card */}
+          <Card className="lg:col-span-8 bg-white border-0 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <CardContent className="p-8 lg:p-12">
+              <h3 className="text-2xl lg:text-3xl font-bold text-modern-gray-900 mb-6">Nuestra Misión</h3>
+              <p className="text-lg text-modern-gray-600 leading-relaxed mb-8">
+                Proporcionar productos alimenticios saludables que promuevan el bienestar y la sostenibilidad, 
+                satisfaciendo las necesidades de consumidores que buscan opciones veganas y libres de alérgenos.
+              </p>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-nutinova-asparagus">100%</div>
+                  <div className="text-sm text-modern-gray-500">Vegano</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-nutinova-asparagus">0%</div>
+                  <div className="text-sm text-modern-gray-500">Gluten</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-nutinova-asparagus">0%</div>
+                  <div className="text-sm text-modern-gray-500">Azúcar</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-nutinova-asparagus">100%</div>
+                  <div className="text-sm text-modern-gray-500">Natural</div>
+                </div>
               </div>
-            ))}
-          </div>
+            </CardContent>
+          </Card>
+
+          {/* Vision - Medium Card */}
+          <Card className="lg:col-span-4 bg-nutinova-asparagus text-white border-0 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <CardContent className="p-8 lg:p-12 h-full flex flex-col justify-center">
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">Nuestra Visión</h3>
+              <p className="text-white/90 leading-relaxed">
+                Ser reconocida globalmente como pionera en alimentos saludables y alternativos, 
+                comenzando por el mercado estadounidense.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Values Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
+            <Card key={index} className="bg-white border-0 shadow-sm hover:shadow-lg transition-all duration-300 group">
+              <CardContent className="p-6 lg:p-8 text-center">
+                <div className="w-12 h-12 bg-modern-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-nutinova-asparagus/10 transition-colors duration-300">
+                  <value.icon className="h-6 w-6 text-modern-gray-600 group-hover:text-nutinova-asparagus transition-colors duration-300" />
+                </div>
+                <h4 className="text-lg font-bold text-modern-gray-900 mb-3">{value.title}</h4>
+                <p className="text-modern-gray-600 text-sm leading-relaxed">{value.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Company Info */}
-        <div className="text-center">
-          <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl max-w-5xl mx-auto overflow-hidden">
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-nutinova-pistachi via-nutinova-moonstone to-nutinova-asparagus"></div>
-            <CardContent className="p-8 sm:p-12 lg:p-16">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-nutinova-asparagus mb-6 sm:mb-8">Nuestra Presencia Global</h3>
-              <p className="text-gray-600 leading-relaxed text-base sm:text-lg lg:text-xl font-light">
-                Con sede en <strong className="text-nutinova-moonstone">Guadalajara, México</strong>, Nutinova Foods está estableciendo una fuerte presencia 
-                en el mercado estadounidense. Nos distinguimos por nuestra dedicación a la innovación y calidad, 
-                ofreciendo productos que no comprometen el sabor ni la textura, siendo la opción preferida para 
-                quienes buscan alternativas saludables y éticas.
+        <div className="mt-16 lg:mt-24 text-center">
+          <Card className="bg-white border-0 shadow-sm max-w-4xl mx-auto">
+            <CardContent className="p-8 lg:p-12">
+              <h3 className="text-2xl font-bold text-modern-gray-900 mb-6">Guadalajara, México</h3>
+              <p className="text-lg text-modern-gray-600 leading-relaxed">
+                Con sede en Guadalajara, Nutinova Foods está estableciendo una fuerte presencia 
+                en el mercado estadounidense, siendo la opción preferida para quienes buscan 
+                alternativas saludables y éticas.
               </p>
             </CardContent>
           </Card>

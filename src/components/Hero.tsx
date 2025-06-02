@@ -1,79 +1,99 @@
 
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Advanced gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/90 via-white to-nutinova-pistachi/40"></div>
-      
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-nutinova-moonstone/5 to-transparent animate-pulse"></div>
-      
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/edf24085-7476-4901-b83b-42b6939ff9da.png')] bg-[length:400px_400px] sm:bg-[length:600px_600px] bg-repeat"></div>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 animate-fade-in">
-        {/* Enhanced Badge */}
-        <div className="inline-flex items-center px-4 py-2 sm:px-6 py-3 lg:px-8 py-4 bg-white/90 backdrop-blur-md border border-nutinova-asparagus/20 rounded-full mb-8 sm:mb-12 lg:mb-16 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
-          <Sparkles className="h-4 w-4 sm:h-5 w-5 text-nutinova-moonstone mr-2 sm:mr-3 group-hover:rotate-12 transition-transform duration-300" />
-          <span className="text-nutinova-asparagus font-medium text-sm sm:text-base lg:text-lg font-playwrite">Líder en Alimentación Saludable</span>
-        </div>
+    <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] items-center">
+          
+          {/* Content - Left Side */}
+          <div className="lg:col-span-6 xl:col-span-5 pt-8 lg:pt-0">
+            <div className="space-y-8">
+              
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-modern-gray-100 rounded-full">
+                <span className="text-modern-gray-600 text-sm font-medium">Líder en Alimentación Saludable</span>
+              </div>
 
-        <h1 className="mb-8 sm:mb-12 lg:mb-16 leading-[0.85]">
-          <span className="block text-nutinova-asparagus mb-3 sm:mb-4 lg:mb-6 text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-poppins font-bold tracking-tight">
-            Innovando para un
-          </span>
-          <span className="block bg-gradient-to-r from-nutinova-moonstone via-nutinova-pistachi to-nutinova-asparagus bg-clip-text text-transparent mb-3 sm:mb-4 lg:mb-6 text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-nilland font-bold tracking-wider">
-            Futuro Alimentario
-          </span>
-          <span className="block text-nutinova-asparagus text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-poppins font-semibold">
-            Saludable y Sostenible
-          </span>
-        </h1>
-        
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-12 sm:mb-16 lg:mb-20 max-w-5xl mx-auto leading-relaxed font-poppins font-light px-4">
-          Empresa líder en la producción de alimentos veganos, sin gluten y sin azúcar. 
-          Comprometidos con la innovación, sostenibilidad y el bienestar de nuestros consumidores.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center mb-16 sm:mb-20 lg:mb-24">
-          <Button 
-            size="lg" 
-            className="group bg-gradient-to-r from-nutinova-asparagus to-nutinova-moonstone hover:from-nutinova-moonstone hover:to-nutinova-asparagus text-white px-8 py-4 sm:px-12 py-6 lg:px-16 py-8 text-base sm:text-lg lg:text-xl rounded-xl lg:rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 font-poppins font-medium w-full sm:w-auto"
-          >
-            Conoce Nuestras Marcas
-            <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-2 border-nutinova-moonstone text-nutinova-moonstone hover:bg-nutinova-moonstone hover:text-white px-8 py-4 sm:px-12 py-6 lg:px-16 py-8 text-base sm:text-lg lg:text-xl rounded-xl lg:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/90 backdrop-blur-md font-poppins font-medium w-full sm:w-auto"
-          >
-            Nuestra Historia
-          </Button>
-        </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 sm:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center animate-bounce-gentle">
-            <span className="text-nutinova-asparagus text-xs sm:text-sm font-medium mb-2 sm:mb-3 uppercase tracking-wider font-poppins">Descubre Más</span>
-            <div className="p-2 sm:p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg">
-              <ChevronDown className="h-5 w-5 sm:h-6 w-6 text-nutinova-asparagus" />
+              {/* Main Headline */}
+              <div className="space-y-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight">
+                  El futuro de la
+                  <span className="block">alimentación</span>
+                  <span className="block text-nutinova-asparagus">saludable</span>
+                </h1>
+                
+                <p className="text-lg sm:text-xl text-modern-gray-600 leading-relaxed max-w-lg">
+                  Productos veganos, sin gluten y sin azúcar que transforman 
+                  la experiencia alimentaria sin comprometer el sabor.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-modern-gray-900 hover:bg-modern-gray-800 text-white px-8 py-4 text-lg rounded-xl group"
+                >
+                  Ver Productos
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 px-8 py-4 text-lg rounded-xl"
+                >
+                  Nuestra Historia
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-modern-gray-200">
+                <div>
+                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">100%</div>
+                  <div className="text-sm text-modern-gray-600">Vegano</div>
+                </div>
+                <div>
+                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">0%</div>
+                  <div className="text-sm text-modern-gray-600">Gluten</div>
+                </div>
+                <div>
+                  <div className="text-2xl lg:text-3xl font-bold text-modern-gray-900">2024</div>
+                  <div className="text-sm text-modern-gray-600">Fundada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual - Right Side */}
+          <div className="lg:col-span-6 xl:col-span-7 relative">
+            <div className="relative h-64 sm:h-80 lg:h-[600px] bg-modern-gray-100 rounded-3xl overflow-hidden">
+              {/* Product image placeholder - will be replaced with actual product photos */}
+              <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/50 to-nutinova-pistachi/30 flex items-center justify-center">
+                <div className="text-center">
+                  <img 
+                    src="/lovable-uploads/09d38c43-f4b6-425c-9720-01b46cb1a59f.png" 
+                    alt="Dainut"
+                    className="h-24 lg:h-32 w-auto mx-auto mb-6"
+                  />
+                  <div className="text-modern-gray-700 text-lg font-medium">Dainut</div>
+                  <div className="text-modern-gray-500 text-sm">Dulce de Leche Vegano</div>
+                </div>
+              </div>
+              
+              {/* Floating elements */}
+              <div className="absolute top-8 right-8 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center">
+                <span className="text-2xl">🌱</span>
+              </div>
+              <div className="absolute bottom-8 left-8 w-20 h-12 bg-nutinova-moonstone rounded-xl flex items-center justify-center">
+                <span className="text-white text-sm font-medium">Sin Gluten</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Enhanced floating elements - hidden on mobile */}
-      <div className="hidden sm:block absolute top-20 left-10 w-16 h-16 lg:w-24 h-24 bg-gradient-to-br from-nutinova-pistachi/30 to-nutinova-moonstone/20 rounded-full blur-xl animate-float"></div>
-      <div className="hidden sm:block absolute bottom-40 right-20 w-24 h-24 lg:w-40 h-40 bg-gradient-to-br from-nutinova-moonstone/30 to-nutinova-asparagus/20 rounded-full blur-xl animate-float delay-1000"></div>
-      <div className="hidden sm:block absolute top-1/3 right-10 w-12 h-12 lg:w-20 h-20 bg-gradient-to-br from-nutinova-asparagus/30 to-nutinova-pistachi/20 rounded-full blur-xl animate-float delay-500"></div>
-      <div className="hidden sm:block absolute bottom-20 left-1/4 w-12 h-12 lg:w-16 h-16 bg-nutinova-beige/40 rounded-full blur-lg animate-pulse"></div>
     </section>
   );
 };
