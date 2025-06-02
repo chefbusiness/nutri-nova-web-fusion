@@ -1,6 +1,5 @@
-
 import { Card, CardContent } from '@/components/ui/card';
-import { Sprout, Globe, Package, Truck } from 'lucide-react';
+import { Sprout, Globe, Package, Truck, Leaf } from 'lucide-react';
 
 const Sustainability = () => {
   const initiatives = [
