@@ -27,8 +27,8 @@ const Brands = () => {
               <div className="lg:col-span-7 p-8 lg:p-16 flex flex-col justify-center">
                 <div className="flex items-center mb-8">
                   <img 
-                    src="/lovable-uploads/09d38c43-f4b6-425c-9720-01b46cb1a59f.png" 
-                    alt="Dainut"
+                    src="/lovable-uploads/68a0ba26-f134-48fb-af4e-cee9523d61ee.png" 
+                    alt="Dainut Vegan Nut"
                     className="h-12 w-auto mr-4"
                   />
                   <div>
