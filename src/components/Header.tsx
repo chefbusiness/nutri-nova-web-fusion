@@ -18,11 +18,11 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-nutinova-beige z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              className="h-10 w-auto" 
+              className="h-16 w-auto" 
               src="/lovable-uploads/dac433a0-7e8c-4473-9fb6-6dfab6048f03.png" 
               alt="Nutinova Foods"
             />
