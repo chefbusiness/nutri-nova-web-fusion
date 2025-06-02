@@ -70,14 +70,19 @@ const Hero = () => {
           {/* Visual - Right Side */}
           <div className="lg:col-span-6 xl:col-span-7 relative">
             <div className="relative h-64 sm:h-80 lg:h-[600px] bg-modern-gray-100 rounded-3xl overflow-hidden">
-              {/* Product image with your uploaded image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/50 to-nutinova-pistachi/30 flex items-center justify-center">
-                <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" 
-                    alt="Nutinova Foods Product"
-                    className="h-32 lg:h-48 w-auto mx-auto mb-6"
-                  />
+              {/* Full frame image with overlay elements */}
+              <img 
+                src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" 
+                alt="Nutinova Foods Product"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              
+              {/* Overlay gradient for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
+              
+              {/* Text overlay */}
+              <div className="absolute bottom-8 left-8 right-8 text-center">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-modern-gray-700 text-lg font-medium">Nutinova Foods</div>
                   <div className="text-modern-gray-500 text-sm">Alimentación Saludable</div>
                 </div>
@@ -87,7 +92,7 @@ const Hero = () => {
               <div className="absolute top-8 right-8 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center">
                 <span className="text-2xl">🌱</span>
               </div>
-              <div className="absolute bottom-8 left-8 w-20 h-12 bg-nutinova-moonstone rounded-xl flex items-center justify-center">
+              <div className="absolute top-8 left-8 w-20 h-12 bg-nutinova-moonstone rounded-xl flex items-center justify-center">
                 <span className="text-white text-sm font-medium">Sin Gluten</span>
               </div>
             </div>
