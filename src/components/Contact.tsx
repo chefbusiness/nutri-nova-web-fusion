@@ -74,40 +74,41 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contacto" className="py-32 bg-nutinova-beige/30 pattern-overlay-teal">
-      <div className="pattern-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-8">
+    <section id="contacto" className="py-16 sm:py-24 lg:py-32 bg-modern-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modern-gray-900 mb-6 leading-tight">
             Contacto
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-modern-gray-600 leading-relaxed">
             Estamos aquí para escucharte. Ya sea que representes una empresa interesada en 
             distribución, un medio de comunicación, o simplemente quieras conocer más sobre nosotros.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Form */}
-          <Card className="shadow-xl smooth-hover">
-            <CardContent className="p-10">
-              <h3 className="text-2xl font-bold text-nutinova-asparagus mb-8">
+          <Card className="bg-white border-modern-gray-200 shadow-sm">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-modern-gray-900 mb-8">
                 Envíanos un Mensaje
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                    <label className="block text-sm font-medium text-modern-gray-700 mb-2">
                       Nombre *
                     </label>
                     <Input
                       required
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="border-nutinova-beige focus:border-nutinova-asparagus h-12"
+                      className="border-modern-gray-200 focus:border-modern-gray-400"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                    <label className="block text-sm font-medium text-modern-gray-700 mb-2">
                       Email *
                     </label>
                     <Input
@@ -115,28 +116,28 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="border-nutinova-beige focus:border-nutinova-asparagus h-12"
+                      className="border-modern-gray-200 focus:border-modern-gray-400"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                  <label className="block text-sm font-medium text-modern-gray-700 mb-2">
                     Empresa/Organización
                   </label>
                   <Input
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
-                    className="border-nutinova-beige focus:border-nutinova-asparagus h-12"
+                    className="border-modern-gray-200 focus:border-modern-gray-400"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                  <label className="block text-sm font-medium text-modern-gray-700 mb-2">
                     Departamento de Interés *
                   </label>
                   <Select onValueChange={(value) => handleInputChange('department', value)}>
-                    <SelectTrigger className="border-nutinova-beige focus:border-nutinova-asparagus h-12">
+                    <SelectTrigger className="border-modern-gray-200 focus:border-modern-gray-400">
                       <SelectValue placeholder="Selecciona un departamento" />
                     </SelectTrigger>
                     <SelectContent>
@@ -150,22 +151,22 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                  <label className="block text-sm font-medium text-modern-gray-700 mb-2">
                     Mensaje *
                   </label>
                   <Textarea
                     required
-                    rows={5}
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="border-nutinova-beige focus:border-nutinova-asparagus"
+                    className="border-modern-gray-200 focus:border-modern-gray-400"
                     placeholder="Cuéntanos cómo podemos ayudarte..."
                   />
                 </div>
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 text-white py-4 h-12"
+                  className="w-full bg-modern-gray-900 hover:bg-modern-gray-800 text-white"
                 >
                   Enviar Mensaje
                 </Button>
@@ -174,21 +175,23 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="shadow-lg smooth-hover border-l-4 border-nutinova-moonstone">
-                <CardContent className="p-8">
+              <Card key={index} className="bg-white border-modern-gray-200 shadow-sm">
+                <CardContent className="p-6">
                   <div className="flex items-start">
-                    <div className="mr-6">
-                      <info.icon className="h-8 w-8 text-nutinova-asparagus" />
+                    <div className="mr-4">
+                      <div className="p-2 bg-modern-gray-100 rounded-lg">
+                        <info.icon className="h-5 w-5 text-modern-gray-600" />
+                      </div>
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-nutinova-asparagus mb-4">
+                      <h4 className="text-lg font-semibold text-modern-gray-900 mb-3">
                         {info.title}
                       </h4>
-                      <div className="space-y-2">
+                      <div className="space-y-1">
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-600 text-lg">
+                          <p key={detailIndex} className="text-modern-gray-600">
                             {detail}
                           </p>
                         ))}
@@ -202,20 +205,22 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-20">
-          <Card className="shadow-xl">
-            <CardContent className="p-12 text-center">
-              <h3 className="text-2xl font-bold text-nutinova-asparagus mb-8">
+        <div className="mt-16 sm:mt-20">
+          <Card className="bg-white border-modern-gray-200 shadow-sm">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-modern-gray-900 mb-8">
                 Nuestra Ubicación
               </h3>
-              <div className="bg-gradient-to-r from-nutinova-beige to-nutinova-pistachi/30 p-10 rounded-lg">
-                <div className="flex justify-center mb-6">
-                  <MapPin className="h-16 w-16 text-nutinova-moonstone" />
+              <div className="bg-modern-gray-50 p-8 rounded-xl">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-modern-gray-200 rounded-xl">
+                    <MapPin className="h-8 w-8 text-modern-gray-600" />
+                  </div>
                 </div>
-                <h4 className="text-xl font-semibold text-nutinova-moonstone mb-4">
+                <h4 className="text-xl font-semibold text-modern-gray-900 mb-3">
                   Guadalajara, Jalisco, México
                 </h4>
-                <p className="text-gray-700 text-lg">
+                <p className="text-modern-gray-600">
                   En el corazón de México, nuestra sede opera como centro de innovación 
                   y producción para toda América del Norte.
                 </p>
