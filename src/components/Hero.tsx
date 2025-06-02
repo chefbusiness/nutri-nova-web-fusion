@@ -4,12 +4,12 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with organic pattern */}
-      <div className="absolute inset-0 leaf-pattern organic-gradient"></div>
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pattern-overlay-green">
+      {/* Background with brand pattern overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/90 via-nutinova-pistachi/60 to-nutinova-asparagus/40"></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+      <div className="pattern-content text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-nutinova-asparagus mb-6 leading-tight">
           Innovando para un
           <span className="block text-nutinova-moonstone">Futuro Alimentario</span>

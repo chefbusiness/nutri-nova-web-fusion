@@ -78,7 +78,90 @@
   }
 }
 
-/* Custom patterns for organic textures */
+/* Nutinova Brand Patterns */
+.nutinova-pattern-green {
+  background-image: url('/lovable-uploads/edf24085-7476-4901-b83b-42b6939ff9da.png');
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+
+.nutinova-pattern-teal {
+  background-image: url('/lovable-uploads/1aa32527-cf59-405f-9291-b1c45b89a8c2.png');
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+
+.nutinova-pattern-beige {
+  background-image: url('/lovable-uploads/68de4270-15c7-4767-9fe1-99ce47e0279f.png');
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+
+/* Pattern overlays with opacity for subtle integration */
+.pattern-overlay-green {
+  position: relative;
+}
+
+.pattern-overlay-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/lovable-uploads/edf24085-7476-4901-b83b-42b6939ff9da.png');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pattern-overlay-teal {
+  position: relative;
+}
+
+.pattern-overlay-teal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/lovable-uploads/1aa32527-cf59-405f-9291-b1c45b89a8c2.png');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pattern-overlay-beige {
+  position: relative;
+}
+
+.pattern-overlay-beige::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/lovable-uploads/68de4270-15c7-4767-9fe1-99ce47e0279f.png');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content positioning for pattern overlays */
+.pattern-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Custom patterns for organic textures - keeping original for backwards compatibility */
 .leaf-pattern {
   background-image: 
     radial-gradient(circle at 20% 50%, rgba(191, 213, 126, 0.1) 0%, transparent 50%),

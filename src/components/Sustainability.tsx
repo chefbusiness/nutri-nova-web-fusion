@@ -30,8 +30,8 @@ const Sustainability = () => {
   ];
 
   return (
-    <section id="sostenibilidad" className="py-20 bg-gradient-to-br from-nutinova-beige/50 to-nutinova-pistachi/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sostenibilidad" className="py-20 pattern-overlay-teal">
+      <div className="pattern-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-6">
             Compromiso con la Sostenibilidad
@@ -44,7 +44,7 @@ const Sustainability = () => {
 
         {/* Main Message */}
         <div className="mb-16">
-          <Card className="bg-white shadow-xl smooth-hover">
+          <Card className="bg-white/95 backdrop-blur-sm shadow-xl smooth-hover border border-nutinova-moonstone/30">
             <CardContent className="p-8 lg:p-12 text-center">
               <h3 className="text-3xl font-bold text-nutinova-moonstone mb-6">
                 Sostenibilidad Ambiental, Social y de Gobernanza
@@ -61,7 +61,7 @@ const Sustainability = () => {
         {/* Initiatives Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-slide-in">
           {initiatives.map((initiative, index) => (
-            <Card key={index} className="bg-white shadow-lg smooth-hover border-2 hover:border-nutinova-pistachi">
+            <Card key={index} className="bg-white/95 backdrop-blur-sm shadow-lg smooth-hover border-2 hover:border-nutinova-pistachi">
               <CardContent className="p-6 text-center h-full flex flex-col">
                 <div className="text-4xl mb-4">{initiative.icon}</div>
                 <h4 className="text-lg font-bold text-nutinova-asparagus mb-3">{initiative.title}</h4>
@@ -78,7 +78,7 @@ const Sustainability = () => {
 
         {/* Health & Wellness Section */}
         <div>
-          <Card className="bg-gradient-to-r from-nutinova-asparagus/10 to-nutinova-moonstone/10 border-2 border-nutinova-asparagus/20 shadow-xl">
+          <Card className="bg-white/95 backdrop-blur-sm border-2 border-nutinova-asparagus/20 shadow-xl">
             <CardContent className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>

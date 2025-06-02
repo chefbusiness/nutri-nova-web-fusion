@@ -37,15 +37,15 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre" className="py-20 bg-nutinova-beige/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sobre" className="py-20 pattern-overlay-beige">
+      <div className="pattern-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mission & Vision */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-8">
             Sobre Nutinova Foods
           </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-lg smooth-hover">
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
               <h3 className="text-2xl font-bold text-nutinova-moonstone mb-4">Nuestra Misión</h3>
               <p className="text-gray-700 leading-relaxed">
                 Proporcionar productos alimenticios saludables que promuevan el bienestar y la sostenibilidad, 
@@ -53,7 +53,7 @@ const About = () => {
                 manteniendo los más altos estándares de calidad.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg smooth-hover">
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
               <h3 className="text-2xl font-bold text-nutinova-moonstone mb-4">Nuestra Visión</h3>
               <p className="text-gray-700 leading-relaxed">
                 Ser reconocida globalmente como pionera en la fabricación de alimentos saludables y alternativos, 
@@ -73,7 +73,7 @@ const About = () => {
             {values.map((value) => (
               <div key={value.id} className="relative">
                 <Card 
-                  className="h-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 hover:border-nutinova-pistachi"
+                  className="h-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 hover:border-nutinova-pistachi bg-white/95 backdrop-blur-sm"
                   onMouseEnter={() => setHoveredValue(value.id)}
                   onMouseLeave={() => setHoveredValue(null)}
                 >
@@ -98,7 +98,7 @@ const About = () => {
 
         {/* Company Info */}
         <div className="mt-16 text-center">
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
+          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg max-w-4xl mx-auto border border-nutinova-beige/50">
             <h3 className="text-2xl font-bold text-nutinova-asparagus mb-6">Nuestra Presencia</h3>
             <p className="text-gray-700 leading-relaxed text-lg">
               Con sede en <strong>Guadalajara, México</strong>, Nutinova Foods está estableciendo una fuerte presencia 
