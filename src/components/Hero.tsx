@@ -1,10 +1,7 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
+  return <section id="inicio" className="min-h-screen bg-white pt-16 lg:pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] items-center">
           
@@ -19,7 +16,7 @@ const Hero = () => {
 
               {/* Main Headline */}
               <div className="space-y-4 lg:space-y-6">
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight">
+                <h1 className="sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-modern-gray-900 leading-[0.9] tracking-tight text-5xl">
                   El futuro de la
                   <span className="block">alimentación</span>
                   <span className="block text-nutinova-asparagus">saludable</span>
@@ -33,18 +30,11 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-modern-gray-900 hover:bg-modern-gray-800 text-white px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl group"
-                >
+                <Button size="lg" className="bg-modern-gray-900 hover:bg-modern-gray-800 text-white px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl group">
                   Ver Productos
                   <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-2 border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl"
-                >
+                <Button variant="outline" size="lg" className="border-2 border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 px-6 py-3 lg:px-8 lg:py-4 text-base lg:text-lg rounded-xl">
                   Nuestra Historia
                 </Button>
               </div>
@@ -71,11 +61,7 @@ const Hero = () => {
           <div className="lg:col-span-6 xl:col-span-7 relative order-2 lg:order-2">
             <div className="relative h-96 sm:h-[400px] lg:h-[600px] bg-modern-gray-100 rounded-2xl lg:rounded-3xl overflow-hidden">
               {/* Full frame image with overlay elements */}
-              <img 
-                src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" 
-                alt="Nutinova Foods Product"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/beb99197-c563-4416-8d30-f1137d1141fa.png" alt="Nutinova Foods Product" className="absolute inset-0 w-full h-full object-cover" />
               
               {/* Overlay gradient for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
@@ -99,8 +85,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
