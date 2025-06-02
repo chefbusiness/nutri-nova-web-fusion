@@ -31,9 +31,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-1">
             <img 
-              src="/lovable-uploads/399fc273-cf88-4e19-a9d4-e7622dac8d07.png" 
+              src="/lovable-uploads/ff2f570f-34c7-4ed6-89b6-8705c61b92cb.png" 
               alt="Nutinova Foods" 
-              className="h-16 mb-6 brightness-0 invert drop-shadow-lg"
+              className="h-16 mb-6 drop-shadow-lg"
             />
             <p className="text-green-100 mb-6 leading-relaxed font-light text-lg">
               Innovando para un futuro alimentario saludable y sostenible. 
