@@ -77,11 +77,11 @@ const Brands = () => {
               {/* Visual Section */}
               <div className="lg:col-span-5 bg-gradient-to-br from-nutinova-beige/30 to-nutinova-pistachi/20 p-8 lg:p-16 flex items-center justify-center min-h-[400px] lg:min-h-[600px]">
                 <div className="text-center">
-                  <div className="w-32 h-32 lg:w-48 h-48 bg-white rounded-3xl shadow-lg flex items-center justify-center mx-auto mb-8 relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                  <div className="w-32 h-32 lg:w-48 lg:h-48 bg-white rounded-3xl shadow-lg flex items-center justify-center mx-auto mb-8 relative overflow-hidden group hover:scale-105 transition-transform duration-300">
                     <img 
-                      src="/lovable-uploads/09d38c43-f4b6-425c-9720-01b46cb1a59f.png" 
-                      alt="Dainut"
-                      className="h-16 lg:h-24 w-auto"
+                      src="/lovable-uploads/46e59cc7-60ef-4de3-ad94-553f7a75e6c7.png" 
+                      alt="Dainut Logo"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <h4 className="text-xl lg:text-2xl font-bold text-modern-gray-900 mb-2">
