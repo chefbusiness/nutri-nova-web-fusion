@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
+import { Lightbulb, Leaf, Heart, Users } from 'lucide-react';
 
 const About = () => {
   const [hoveredValue, setHoveredValue] = useState<string | null>(null);
@@ -9,53 +10,53 @@ const About = () => {
     {
       id: 'innovacion',
       title: 'Innovación',
-      icon: '💡',
+      icon: Lightbulb,
       description: 'Constante búsqueda de nuevas formas de mejorar y crear productos alimenticios alternativos.',
       examples: 'Desarrollo de alternativas veganas que mantienen sabor y textura excepcionales.'
     },
     {
       id: 'sostenibilidad',
       title: 'Sostenibilidad',
-      icon: '🌱',
+      icon: Leaf,
       description: 'Compromiso con prácticas que respetan el medio ambiente y reducen la huella de carbono.',
       examples: 'Uso de ingredientes orgánicos y procesos de producción eco-amigables.'
     },
     {
       id: 'salud',
       title: 'Salud y Bienestar',
-      icon: '❤️',
+      icon: Heart,
       description: 'Fomento de un estilo de vida saludable mediante productos nutritivos y deliciosos.',
       examples: 'Productos libres de gluten, azúcar y alérgenos comunes para todas las necesidades.'
     },
     {
       id: 'inclusividad',
       title: 'Inclusividad',
-      icon: '🤝',
+      icon: Users,
       description: 'Provisión de opciones para todos, independientemente de restricciones dietéticas.',
       examples: 'Líneas de productos aptas para veganos, celíacos y diabéticos.'
     }
   ];
 
   return (
-    <section id="sobre" className="py-20 pattern-overlay-beige">
+    <section id="sobre" className="py-32 pattern-overlay-beige">
       <div className="pattern-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mission & Vision */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-8">
             Sobre Nutinova Foods
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
-              <h3 className="text-2xl font-bold text-nutinova-moonstone mb-4">Nuestra Misión</h3>
-              <p className="text-gray-700 leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
+              <h3 className="text-2xl font-bold text-nutinova-moonstone mb-6">Nuestra Misión</h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
                 Proporcionar productos alimenticios saludables que promuevan el bienestar y la sostenibilidad, 
                 satisfaciendo las necesidades de consumidores que buscan opciones veganas y libres de alérgenos, 
                 manteniendo los más altos estándares de calidad.
               </p>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
-              <h3 className="text-2xl font-bold text-nutinova-moonstone mb-4">Nuestra Visión</h3>
-              <p className="text-gray-700 leading-relaxed">
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-2xl shadow-lg smooth-hover border border-nutinova-beige/50">
+              <h3 className="text-2xl font-bold text-nutinova-moonstone mb-6">Nuestra Visión</h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
                 Ser reconocida globalmente como pionera en la fabricación de alimentos saludables y alternativos, 
                 influyendo en la industria alimentaria hacia prácticas más sostenibles y conscientes, 
                 comenzando por el mercado estadounidense.
@@ -65,11 +66,11 @@ const About = () => {
         </div>
 
         {/* Corporate Values */}
-        <div className="animate-slide-in">
-          <h3 className="text-3xl font-bold text-center text-nutinova-asparagus mb-12">
+        <div className="animate-slide-in mb-20">
+          <h3 className="text-3xl font-bold text-center text-nutinova-asparagus mb-16">
             Nuestros Valores Corporativos
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
               <div key={value.id} className="relative">
                 <Card 
@@ -77,16 +78,18 @@ const About = () => {
                   onMouseEnter={() => setHoveredValue(value.id)}
                   onMouseLeave={() => setHoveredValue(null)}
                 >
-                  <CardContent className="p-6 text-center h-full flex flex-col justify-center">
-                    <div className="text-4xl mb-4">{value.icon}</div>
-                    <h4 className="text-xl font-bold text-nutinova-asparagus mb-3">{value.title}</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                  <CardContent className="p-8 text-center h-full flex flex-col justify-center">
+                    <div className="flex justify-center mb-6">
+                      <value.icon className="h-12 w-12 text-nutinova-asparagus" />
+                    </div>
+                    <h4 className="text-xl font-bold text-nutinova-asparagus mb-4">{value.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
                 
                 {/* Hover popup */}
                 {hoveredValue === value.id && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-20 bg-nutinova-asparagus text-white p-4 rounded-lg shadow-xl max-w-xs animate-fade-in">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 z-20 bg-nutinova-asparagus text-white p-4 rounded-lg shadow-xl max-w-xs animate-fade-in">
                     <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-nutinova-asparagus rotate-45"></div>
                     <p className="text-sm font-medium">{value.examples}</p>
                   </div>
@@ -97,8 +100,8 @@ const About = () => {
         </div>
 
         {/* Company Info */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg max-w-4xl mx-auto border border-nutinova-beige/50">
+        <div className="text-center">
+          <div className="bg-white/95 backdrop-blur-sm p-10 rounded-2xl shadow-lg max-w-4xl mx-auto border border-nutinova-beige/50">
             <h3 className="text-2xl font-bold text-nutinova-asparagus mb-6">Nuestra Presencia</h3>
             <p className="text-gray-700 leading-relaxed text-lg">
               Con sede en <strong>Guadalajara, México</strong>, Nutinova Foods está estableciendo una fuerte presencia 

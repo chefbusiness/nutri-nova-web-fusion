@@ -18,10 +18,10 @@ const Brands = () => {
   ];
 
   return (
-    <section id="marcas" className="py-20 bg-white">
+    <section id="marcas" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-6">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-8">
             Nuestras Marcas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -30,14 +30,14 @@ const Brands = () => {
           </p>
         </div>
 
-        <div className="grid gap-12">
+        <div className="grid gap-16">
           {brands.map((brand) => (
             <Card key={brand.name} className="overflow-hidden shadow-xl smooth-hover border-2 hover:border-nutinova-pistachi">
               <CardContent className="p-0">
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Brand Info */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="flex items-center mb-6">
+                  <div className="p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="flex items-center mb-8">
                       <img 
                         src={brand.image} 
                         alt={brand.name}
@@ -46,17 +46,17 @@ const Brands = () => {
                       <h3 className="text-3xl font-bold text-nutinova-asparagus">{brand.name}</h3>
                     </div>
                     
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                       {brand.description}
                     </p>
 
                     {/* Products */}
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-nutinova-moonstone mb-3">Productos:</h4>
-                      <ul className="space-y-2">
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold text-nutinova-moonstone mb-4">Productos:</h4>
+                      <ul className="space-y-3">
                         {brand.products.map((product, index) => (
-                          <li key={index} className="flex items-center text-gray-700">
-                            <span className="w-2 h-2 bg-nutinova-pistachi rounded-full mr-3"></span>
+                          <li key={index} className="flex items-center text-gray-700 text-lg">
+                            <span className="w-2 h-2 bg-nutinova-pistachi rounded-full mr-4"></span>
                             {product}
                           </li>
                         ))}
@@ -64,12 +64,12 @@ const Brands = () => {
                     </div>
 
                     {/* Features */}
-                    <div className="mb-8">
-                      <div className="flex flex-wrap gap-2">
+                    <div className="mb-10">
+                      <div className="flex flex-wrap gap-3">
                         {brand.features.map((feature, index) => (
                           <span 
                             key={index}
-                            className="px-3 py-1 bg-nutinova-beige text-nutinova-asparagus rounded-full text-sm font-medium"
+                            className="px-4 py-2 bg-nutinova-beige text-nutinova-asparagus rounded-full font-medium"
                           >
                             {feature}
                           </span>
@@ -86,19 +86,19 @@ const Brands = () => {
                   </div>
 
                   {/* Visual Section */}
-                  <div className="bg-gradient-to-br from-nutinova-beige via-nutinova-pistachi/20 to-nutinova-moonstone/20 p-8 lg:p-12 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-nutinova-beige via-nutinova-pistachi/20 to-nutinova-moonstone/20 p-12 lg:p-16 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-white rounded-full shadow-lg flex items-center justify-center mb-6 mx-auto">
+                      <div className="w-40 h-40 bg-white rounded-full shadow-lg flex items-center justify-center mb-8 mx-auto">
                         <img 
                           src={brand.image} 
                           alt={brand.name}
-                          className="h-20 w-auto"
+                          className="h-24 w-auto"
                         />
                       </div>
-                      <h4 className="text-2xl font-bold text-nutinova-asparagus mb-2">
+                      <h4 className="text-2xl font-bold text-nutinova-asparagus mb-3">
                         Primera marca en el mercado
                       </h4>
-                      <p className="text-nutinova-moonstone font-medium">
+                      <p className="text-nutinova-moonstone font-medium text-lg">
                         Lanzamiento 2024
                       </p>
                     </div>
@@ -110,13 +110,13 @@ const Brands = () => {
         </div>
 
         {/* Future Brands Teaser */}
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <Card className="bg-gradient-to-r from-nutinova-beige to-nutinova-pistachi/30 border-2 border-nutinova-pistachi/50">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-nutinova-asparagus mb-4">
+            <CardContent className="p-10">
+              <h3 className="text-2xl font-bold text-nutinova-asparagus mb-6">
                 Más Marcas en Camino
               </h3>
-              <p className="text-gray-700 text-lg mb-6">
+              <p className="text-gray-700 text-lg mb-8">
                 Nutinova Foods continúa innovando y expandiendo su portafolio de marcas. 
                 Mantente al día con nuestros próximos lanzamientos.
               </p>
