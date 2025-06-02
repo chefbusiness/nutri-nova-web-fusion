@@ -10,14 +10,6 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/399fc273-cf88-4e19-a9d4-e7622dac8d07.png" 
-            alt="Nutinova Foods" 
-            className="h-24 mx-auto mb-8"
-          />
-        </div>
-        
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-nutinova-asparagus mb-6 leading-tight">
           Innovando para un
           <span className="block text-nutinova-moonstone">Futuro Alimentario</span>

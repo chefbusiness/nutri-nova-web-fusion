@@ -23,7 +23,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <img 
               className="h-10 w-auto" 
-              src="/lovable-uploads/399fc273-cf88-4e19-a9d4-e7622dac8d07.png" 
+              src="/lovable-uploads/dac433a0-7e8c-4473-9fb6-6dfab6048f03.png" 
               alt="Nutinova Foods"
             />
           </div>
