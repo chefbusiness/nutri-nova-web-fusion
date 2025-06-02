@@ -41,11 +41,11 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-nutinova-beige z-50 font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-32">
+        <div className="flex justify-between items-center h-20 sm:h-24 lg:h-32">
           {/* Logo */}
           <div className="flex-shrink-0 hover:scale-105 transition-transform duration-300">
             <img 
-              className="h-40 w-auto drop-shadow-lg" 
+              className="h-16 sm:h-20 lg:h-28 w-auto drop-shadow-lg" 
               src="/lovable-uploads/dac433a0-7e8c-4473-9fb6-6dfab6048f03.png" 
               alt="Nutinova Foods"
             />
@@ -54,22 +54,22 @@ const Header = () => {
           {/* Desktop Mega Navigation */}
           <nav className="hidden md:flex">
             <NavigationMenu>
-              <NavigationMenuList className="space-x-8">
+              <NavigationMenuList className="space-x-4 lg:space-x-8">
                 {mainNavigation.map((item) => (
                   <NavigationMenuItem key={item.name}>
                     {item.submenu ? (
                       <>
-                        <NavigationMenuTrigger className="text-nutinova-asparagus hover:text-nutinova-moonstone transition-colors duration-300 font-medium bg-transparent hover:bg-nutinova-beige/30 data-[active]:bg-nutinova-beige/50 data-[state=open]:bg-nutinova-beige/50 text-lg font-poppins">
+                        <NavigationMenuTrigger className="text-nutinova-asparagus hover:text-nutinova-moonstone transition-colors duration-300 font-medium bg-transparent hover:bg-nutinova-beige/30 data-[active]:bg-nutinova-beige/50 data-[state=open]:bg-nutinova-beige/50 text-sm lg:text-lg font-poppins">
                           {item.name}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <div className="w-80 p-6 bg-white/95 backdrop-blur-md border border-nutinova-beige rounded-xl shadow-2xl">
+                          <div className="w-72 lg:w-80 p-4 lg:p-6 bg-white/95 backdrop-blur-md border border-nutinova-beige rounded-xl shadow-2xl">
                             <div className="grid gap-3">
                               {item.submenu.map((subItem) => (
                                 <a
                                   key={subItem.name}
                                   href={subItem.href}
-                                  className="block px-4 py-3 text-nutinova-asparagus hover:text-nutinova-moonstone hover:bg-nutinova-beige/50 rounded-lg transition-all duration-300 font-medium font-poppins hover:translate-x-1"
+                                  className="block px-3 lg:px-4 py-2 lg:py-3 text-nutinova-asparagus hover:text-nutinova-moonstone hover:bg-nutinova-beige/50 rounded-lg transition-all duration-300 font-medium font-poppins hover:translate-x-1 text-sm lg:text-base"
                                 >
                                   {subItem.name}
                                 </a>
@@ -81,7 +81,7 @@ const Header = () => {
                     ) : (
                       <a
                         href={item.href}
-                        className="px-4 py-2 text-nutinova-asparagus hover:text-nutinova-moonstone transition-colors duration-300 font-medium text-lg font-poppins hover:scale-105"
+                        className="px-2 lg:px-4 py-2 text-nutinova-asparagus hover:text-nutinova-moonstone transition-colors duration-300 font-medium text-sm lg:text-lg font-poppins hover:scale-105"
                       >
                         {item.name}
                       </a>
@@ -93,11 +93,11 @@ const Header = () => {
           </nav>
 
           {/* Search and Language */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <Button variant="ghost" size="icon" className="text-nutinova-asparagus hover:bg-nutinova-beige/30 hover:scale-110 transition-all duration-300">
-              <Search className="h-5 w-5" />
+              <Search className="h-4 w-4 lg:h-5 lg:w-5" />
             </Button>
-            <div className="text-sm text-nutinova-asparagus font-poppins font-medium">
+            <div className="text-xs lg:text-sm text-nutinova-asparagus font-poppins font-medium">
               <span className="font-semibold">ES</span> | <span className="text-gray-400">EN</span>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-nutinova-asparagus hover:bg-nutinova-beige/30 transition-all duration-300"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -123,7 +123,7 @@ const Header = () => {
                 <div key={item.name}>
                   <a
                     href={item.href}
-                    className="block px-3 py-2 text-nutinova-asparagus hover:text-nutinova-moonstone hover:bg-nutinova-beige/50 rounded-md transition-colors duration-300 font-medium font-poppins"
+                    className="block px-3 py-2 text-nutinova-asparagus hover:text-nutinova-moonstone hover:bg-nutinova-beige/50 rounded-md transition-colors duration-300 font-medium font-poppins text-base"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
