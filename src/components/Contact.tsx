@@ -17,8 +17,11 @@ const Contact = () => {
     message: ''
   });
 
+  console.log('Contact component rendered');
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submitted:', formData);
     toast({
       title: "Mensaje enviado",
       description: "Nos pondremos en contacto contigo pronto.",
@@ -70,8 +73,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-nutinova-beige/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contacto" className="py-20 bg-nutinova-beige/30 pattern-overlay-teal">
+      <div className="pattern-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-nutinova-asparagus mb-6">
             Contacto

@@ -78,28 +78,32 @@
   }
 }
 
-/* Nutinova Brand Patterns */
+/* Nutinova Brand Patterns - Direct background patterns */
 .nutinova-pattern-green {
   background-image: url('/lovable-uploads/edf24085-7476-4901-b83b-42b6939ff9da.png');
-  background-size: 300px 300px;
+  background-size: 400px 400px;
   background-repeat: repeat;
+  background-position: center;
 }
 
 .nutinova-pattern-teal {
   background-image: url('/lovable-uploads/1aa32527-cf59-405f-9291-b1c45b89a8c2.png');
-  background-size: 300px 300px;
+  background-size: 400px 400px;
   background-repeat: repeat;
+  background-position: center;
 }
 
 .nutinova-pattern-beige {
   background-image: url('/lovable-uploads/68de4270-15c7-4767-9fe1-99ce47e0279f.png');
-  background-size: 300px 300px;
+  background-size: 400px 400px;
   background-repeat: repeat;
+  background-position: center;
 }
 
 /* Pattern overlays with opacity for subtle integration */
 .pattern-overlay-green {
   position: relative;
+  overflow: hidden;
 }
 
 .pattern-overlay-green::before {
@@ -110,15 +114,17 @@
   right: 0;
   bottom: 0;
   background-image: url('/lovable-uploads/edf24085-7476-4901-b83b-42b6939ff9da.png');
-  background-size: 400px 400px;
+  background-size: 300px 300px;
   background-repeat: repeat;
-  opacity: 0.1;
+  background-position: center;
+  opacity: 0.15;
   pointer-events: none;
   z-index: 1;
 }
 
 .pattern-overlay-teal {
   position: relative;
+  overflow: hidden;
 }
 
 .pattern-overlay-teal::before {
@@ -129,15 +135,17 @@
   right: 0;
   bottom: 0;
   background-image: url('/lovable-uploads/1aa32527-cf59-405f-9291-b1c45b89a8c2.png');
-  background-size: 400px 400px;
+  background-size: 350px 350px;
   background-repeat: repeat;
-  opacity: 0.08;
+  background-position: center;
+  opacity: 0.12;
   pointer-events: none;
   z-index: 1;
 }
 
 .pattern-overlay-beige {
   position: relative;
+  overflow: hidden;
 }
 
 .pattern-overlay-beige::before {
@@ -148,9 +156,10 @@
   right: 0;
   bottom: 0;
   background-image: url('/lovable-uploads/68de4270-15c7-4767-9fe1-99ce47e0279f.png');
-  background-size: 400px 400px;
+  background-size: 320px 320px;
   background-repeat: repeat;
-  opacity: 0.12;
+  background-position: center;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 1;
 }
