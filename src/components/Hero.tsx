@@ -80,11 +80,11 @@ const Hero = () => {
               {/* Overlay gradient for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
               
-              {/* Text overlay */}
-              <div className="absolute bottom-8 left-8 right-8 text-center">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-modern-gray-700 text-lg font-medium">Nutinova Foods</div>
-                  <div className="text-modern-gray-500 text-sm">Alimentación Saludable</div>
+              {/* Text overlay - Better centered */}
+              <div className="absolute inset-x-0 bottom-8 flex justify-center">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 mx-8 max-w-sm w-full text-center">
+                  <div className="text-modern-gray-700 text-xl font-bold">Nutinova Foods</div>
+                  <div className="text-modern-gray-500 text-base">Alimentación Saludable</div>
                 </div>
               </div>
               
