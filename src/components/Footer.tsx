@@ -25,9 +25,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-6 lg:col-span-5">
             <img 
-              src="/lovable-uploads/36e41bd7-a73a-4300-bd5a-f8f3687247cf.png" 
+              src="/lovable-uploads/a1ccef5f-b702-4ce4-9eda-66d5cd4ddc24.png" 
               alt="Nutinova Foods" 
-              className="h-10 mb-6"
+              className="h-12 mb-6"
             />
             <p className="text-modern-gray-300 mb-6 leading-relaxed text-lg max-w-md">
               Innovando para un futuro alimentario saludable y sostenible desde Guadalajara, México.
