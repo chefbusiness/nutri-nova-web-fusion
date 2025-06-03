@@ -25,7 +25,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-6 lg:col-span-5">
             <img 
-              src="/lovable-uploads/76b5f10b-ae4d-4fe4-a9f1-1bda97f5a009.png" 
+              src="/lovable-uploads/36e41bd7-a73a-4300-bd5a-f8f3687247cf.png" 
               alt="Nutinova Foods" 
               className="h-10 mb-6"
             />
