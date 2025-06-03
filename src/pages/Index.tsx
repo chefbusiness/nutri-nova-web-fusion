@@ -6,7 +6,6 @@ import Brands from '@/components/Brands';
 import Sustainability from '@/components/Sustainability';
 import Innovation from '@/components/Innovation';
 import Contact from '@/components/Contact';
-import LocationSection from '@/components/LocationSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -20,7 +19,6 @@ const Index = () => {
         <Sustainability />
         <Innovation />
         <Contact />
-        <LocationSection />
       </main>
       <Footer />
     </div>

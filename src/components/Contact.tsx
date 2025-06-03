@@ -1,6 +1,7 @@
 
 import ContactForm from '@/components/ContactForm';
 import ContactInfo from '@/components/ContactInfo';
+import LocationSection from '@/components/LocationSection';
 
 const Contact = () => {
   console.log('Contact component rendered');
@@ -26,6 +27,9 @@ const Contact = () => {
           {/* Contact Information */}
           <ContactInfo />
         </div>
+
+        {/* Map Section */}
+        <LocationSection />
       </div>
     </section>
   );
