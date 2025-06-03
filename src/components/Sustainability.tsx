@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Sprout, Globe, Package, Truck, Leaf } from 'lucide-react';
 
@@ -76,15 +75,14 @@ const Sustainability = () => {
             </Card>
           </div>
 
-          {/* Right: Visual Element */}
+          {/* Right: Truck Image */}
           <div className="order-1 lg:order-2">
-            <div className="aspect-[4/3] bg-modern-gray-100 rounded-2xl p-8 flex items-center justify-center relative overflow-hidden">
-              <div className="text-center relative z-10">
-                <Globe className="h-16 w-16 text-modern-gray-400 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-modern-gray-700">
-                  Impacto Positivo Global
-                </h4>
-              </div>
+            <div className="aspect-[4/3] bg-modern-gray-100 rounded-2xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/98ca4aa0-f7a1-46ae-a2b6-05b717335542.png" 
+                alt="Furgón de distribución Nutinova Foods" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
