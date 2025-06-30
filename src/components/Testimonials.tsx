@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,7 @@ const Testimonials = () => {
       role: 'Directora de Compras',
       content: 'Los productos de Nutinova han sido un éxito total en nuestras tiendas. La calidad es excepcional y nuestros clientes están encantados con las opciones veganas.',
       rating: 5,
-      avatar: '/lovable-uploads/76b5f10b-ae4d-4fe4-a9f1-1bda97f5a009.png'
+      avatar: '/lovable-uploads/f5c09d0d-cd50-4e5b-94a4-344999cc4a9a.png'
     },
     {
       id: 2,
@@ -24,7 +23,7 @@ const Testimonials = () => {
       role: 'Gerente General',
       content: 'Nutinova Foods se ha convertido en nuestro socio estratégico para productos saludables. Su compromiso con la sostenibilidad coincide perfectamente con nuestros valores.',
       rating: 5,
-      avatar: '/lovable-uploads/98ca4aa0-f7a1-46ae-a2b6-05b717335542.png'
+      avatar: '/lovable-uploads/3bd9d1e4-5431-4a08-acea-2244baf4e44d.png'
     },
     {
       id: 3,
@@ -33,7 +32,7 @@ const Testimonials = () => {
       role: 'Directora de Sostenibilidad',
       content: 'La innovación constante de Nutinova y su enfoque en productos sin gluten ha ampliado significativamente nuestro mercado objetivo.',
       rating: 5,
-      avatar: '/lovable-uploads/68a0ba26-f134-48fb-af4e-cee9523d61ee.png'
+      avatar: '/lovable-uploads/24886d5c-3c35-41f3-8990-c62d7b08f1ac.png'
     }
   ];
 
