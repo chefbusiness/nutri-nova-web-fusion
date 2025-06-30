@@ -25,7 +25,7 @@ const Cookies = () => {
       <div className="min-h-screen bg-modern-gray-50">
         <Header />
         
-        <div className="pt-20 pb-16">
+        <div className="pt-24 pb-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumbs */}
             <div className="mb-8">
