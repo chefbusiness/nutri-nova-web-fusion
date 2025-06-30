@@ -104,29 +104,34 @@ const Hero = () => {
                 {/* Overlay gradient for better text readability */}
                 <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
                 
-                {/* Text overlay - Better positioned for mobile */}
-                <div className={`absolute inset-x-0 flex justify-center px-3 ${
-                  isMobile ? 'bottom-8' : 'bottom-3 sm:bottom-6 lg:bottom-8'
-                }`}>
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl p-3 sm:p-4 lg:p-6 max-w-xs sm:max-w-sm w-full text-center transition-all duration-300 hover:bg-white/95 hover:scale-105">
-                    <div className="text-modern-gray-700 text-base sm:text-lg lg:text-xl font-bold">Nutinova Foods</div>
-                    <div className="text-modern-gray-500 text-sm sm:text-base lg:text-base">Alimentación Saludable</div>
-                    <Button
-                      size="sm"
-                      onClick={() => setIsNewsletterOpen(true)}
-                      className="mt-2 bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 text-white text-xs"
-                    >
-                      Suscríbete
-                    </Button>
+                {/* Text overlay - Hidden on mobile, horizontal layout on desktop */}
+                {!isMobile && (
+                  <div className="absolute inset-x-0 bottom-3 sm:bottom-6 lg:bottom-8 flex justify-center px-3">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 max-w-xs sm:max-w-md lg:max-w-lg transition-all duration-300 hover:bg-white/95 hover:scale-105">
+                      {/* Horizontal Layout for Desktop/Tablet */}
+                      <div className="flex items-center justify-between gap-3 lg:gap-4">
+                        <div className="flex-1">
+                          <div className="text-modern-gray-700 text-sm sm:text-base lg:text-lg font-bold">Nutinova Foods</div>
+                          <div className="text-modern-gray-500 text-xs sm:text-sm lg:text-sm">Alimentación Saludable</div>
+                        </div>
+                        <Button
+                          size="sm"
+                          onClick={() => setIsNewsletterOpen(true)}
+                          className="bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-1.5 lg:py-2 flex-shrink-0"
+                        >
+                          Suscríbete
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
                 
-                {/* Floating elements - Smaller and better positioned for mobile */}
+                {/* Floating elements - Better positioned and improved "Sin Gluten" badge */}
                 <div className="absolute top-3 sm:top-4 lg:top-8 right-3 sm:right-4 lg:right-8 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white rounded-lg lg:rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl">
                   <span className="text-base sm:text-lg lg:text-2xl">🌱</span>
                 </div>
-                <div className="absolute top-3 sm:top-4 lg:top-8 left-3 sm:left-4 lg:left-8 w-14 h-6 sm:w-16 sm:h-8 lg:w-20 lg:h-12 bg-nutinova-moonstone rounded-md lg:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                  <span className="text-white text-xs sm:text-sm lg:text-sm font-medium">Sin Gluten</span>
+                <div className="absolute top-3 sm:top-4 lg:top-8 left-3 sm:left-4 lg:left-8 bg-nutinova-moonstone rounded-md lg:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2">
+                  <span className="text-white text-xs sm:text-sm lg:text-sm font-medium whitespace-nowrap">Sin Gluten</span>
                 </div>
               </div>
             </div>
