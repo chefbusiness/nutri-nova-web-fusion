@@ -8,6 +8,7 @@ interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: string;
+  canonical?: string;
 }
 
 const SEOHead = ({
@@ -16,8 +17,11 @@ const SEOHead = ({
   keywords = "alimentos saludables, vegano, sin gluten, sin azúcar, sostenibilidad, innovación alimentaria, Nutinova, México",
   image = "/nutinova-og-image.jpg",
   url = "https://nutinovafoods.com",
-  type = "website"
+  type = "website",
+  canonical
 }: SEOHeadProps) => {
+  const canonicalUrl = canonical || url;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -46,7 +50,12 @@ const SEOHead = ({
       {/* Additional SEO */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://clarity.microsoft.com" />
       
       {/* Structured Data */}
       <script type="application/ld+json">

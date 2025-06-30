@@ -1,10 +1,18 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Política de Privacidad - Nutinova Foods"
+        description="Conoce cómo Nutinova Foods protege y maneja tu información personal. Transparencia total en el uso de datos y cookies."
+        keywords="política privacidad, protección datos, cookies, Nutinova Foods, transparencia"
+        url="https://nutinovafoods.com/privacidad"
+        canonical="https://nutinovafoods.com/privacidad"
+      />
       <Header />
       <main className="py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

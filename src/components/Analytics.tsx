@@ -4,11 +4,13 @@ import { useEffect } from 'react';
 interface AnalyticsProps {
   gtmId?: string;
   gaId?: string;
+  clarityId?: string;
 }
 
 const Analytics = ({ 
   gtmId = "GTM-XXXXXXX", 
-  gaId = "G-XXXXXXXXXX" 
+  gaId = "G-XXXXXXXXXX",
+  clarityId = "YOUR_CLARITY_ID"
 }: AnalyticsProps) => {
   
   useEffect(() => {
@@ -45,12 +47,26 @@ const Analytics = ({
         gtag('js', new Date());
         gtag('config', '${gaId}', {
           page_title: document.title,
-          page_location: window.location.href
+          page_location: window.location.href,
+          custom_map: {'custom_parameter': 'nutinova_engagement'}
         });
       `;
       document.head.appendChild(script4);
     }
-  }, [gtmId, gaId]);
+
+    // Microsoft Clarity
+    if (clarityId && typeof window !== 'undefined') {
+      const script5 = document.createElement('script');
+      script5.innerHTML = `
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "${clarityId}");
+      `;
+      document.head.appendChild(script5);
+    }
+  }, [gtmId, gaId, clarityId]);
 
   return (
     <>
@@ -65,6 +81,28 @@ const Analytics = ({
       </noscript>
     </>
   );
+};
+
+// Analytics utility functions for tracking events
+export const trackEvent = (eventName: string, parameters?: Record<string, string | number>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, parameters);
+  }
+};
+
+export const trackFormSubmission = (formType: string, department?: string) => {
+  trackEvent('form_submit', {
+    form_type: formType,
+    department: department || 'unknown',
+    timestamp: Date.now()
+  });
+};
+
+export const trackPageView = (pageName: string) => {
+  trackEvent('page_view', {
+    page_name: pageName,
+    timestamp: Date.now()
+  });
 };
 
 export default Analytics;
