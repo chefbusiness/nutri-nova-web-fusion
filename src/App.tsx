@@ -11,6 +11,8 @@ import SEOHead from "./components/SEOHead";
 import Analytics from "./components/Analytics";
 import ScrollIndicator from "./components/ScrollIndicator";
 import OfflineFallback from "./components/OfflineFallback";
+import SkipLink from "./components/SkipLink";
+import ErrorBoundary from "./components/ErrorBoundary";
 import useOnlineStatus from "./hooks/useOnlineStatus";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
@@ -31,26 +33,29 @@ const AppContent = () => {
   const isOnline = useOnlineStatus();
 
   return (
-    <>
+    <ErrorBoundary>
       <SEOHead />
       <Analytics />
+      <SkipLink />
       <Toaster />
       <Sonner />
       <BrowserRouter>
         <ScrollIndicator />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/privacidad" element={<Privacy />} />
-          <Route path="/terminos" element={<Terms />} />
-          <Route path="/cookies" element={<Cookies />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/privacidad" element={<Privacy />} />
+            <Route path="/terminos" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
         <CookieBanner />
         {!isOnline && <OfflineFallback />}
       </BrowserRouter>
-    </>
+    </ErrorBoundary>
   );
 };
 
