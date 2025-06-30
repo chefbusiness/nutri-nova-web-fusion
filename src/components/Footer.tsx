@@ -1,3 +1,6 @@
+
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -9,9 +12,9 @@ const Footer = () => {
       { name: 'Contacto', href: '#contacto' }
     ],
     legal: [
-      { name: 'Política de Privacidad', href: '#' },
-      { name: 'Términos y Condiciones', href: '#' },
-      { name: 'Política de Cookies', href: '#' }
+      { name: 'Política de Privacidad', href: '/privacidad' },
+      { name: 'Términos y Condiciones', href: '/terminos' },
+      { name: 'Política de Cookies', href: '/cookies' }
     ]
   };
 
@@ -94,13 +97,13 @@ const Footer = () => {
             {/* Legal Links */}
             <div className="flex flex-wrap space-x-6 text-sm text-modern-gray-400">
               {links.legal.map((link) => (
-                <a 
+                <Link 
                   key={link.name}
-                  href={link.href} 
+                  to={link.href} 
                   className="hover:text-white transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
