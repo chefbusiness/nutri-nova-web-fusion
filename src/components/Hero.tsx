@@ -5,11 +5,13 @@ import { ArrowRight } from 'lucide-react';
 import useParallax from '@/hooks/useParallax';
 import useSmoothScroll from '@/hooks/useSmoothScroll';
 import NewsletterModal from '@/components/NewsletterModal';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
   const parallaxOffset = useParallax({ speed: 0.3 });
   const { scrollToSection } = useSmoothScroll();
+  const isMobile = useIsMobile();
 
   const handleViewBrands = () => {
     scrollToSection('marcas');
@@ -102,8 +104,10 @@ const Hero = () => {
                 {/* Overlay gradient for better text readability */}
                 <div className="absolute inset-0 bg-gradient-to-br from-nutinova-beige/20 to-nutinova-pistachi/20"></div>
                 
-                {/* Text overlay - Better centered */}
-                <div className="absolute inset-x-0 bottom-3 sm:bottom-6 lg:bottom-8 flex justify-center px-3">
+                {/* Text overlay - Better positioned for mobile */}
+                <div className={`absolute inset-x-0 flex justify-center px-3 ${
+                  isMobile ? 'bottom-8' : 'bottom-3 sm:bottom-6 lg:bottom-8'
+                }`}>
                   <div className="bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl p-3 sm:p-4 lg:p-6 max-w-xs sm:max-w-sm w-full text-center transition-all duration-300 hover:bg-white/95 hover:scale-105">
                     <div className="text-modern-gray-700 text-base sm:text-lg lg:text-xl font-bold">Nutinova Foods</div>
                     <div className="text-modern-gray-500 text-sm sm:text-base lg:text-base">Alimentación Saludable</div>
