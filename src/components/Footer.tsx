@@ -6,10 +6,10 @@ const Footer = () => {
 
   const links = {
     company: [
-      { name: 'Sobre Nutinova', href: '#sobre' },
-      { name: 'Nuestras Marcas', href: '#marcas' },
-      { name: 'Sostenibilidad', href: '#sostenibilidad' },
-      { name: 'Contacto', href: '#contacto' }
+      { name: 'Sobre Nutinova', to: '/#sobre' },
+      { name: 'Nuestras Marcas', to: '/#marcas' },
+      { name: 'Sostenibilidad', to: '/#sostenibilidad' },
+      { name: 'Contacto', to: '/#contacto' }
     ],
     legal: [
       { name: 'Política de Privacidad', href: '/privacidad' },
@@ -47,12 +47,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {links.company.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.to} 
                     className="text-modern-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

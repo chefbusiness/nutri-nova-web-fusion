@@ -16,7 +16,7 @@ const Privacy = () => {
     <>
       <Helmet>
         <title>Política de Privacidad - Nutinova Foods</title>
-        <meta name="description" content="Política de privacidad de Nutinova Foods. Conoce cómo protegemos y utilizamos tu información personal." />
+        <meta name="description" content="Política de privacidad de Nutinova Foods. Conoce cómo recopilamos, utilizamos y protegemos tu información personal." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://nutinovafoods.com/privacidad" />
       </Helmet>
@@ -24,7 +24,7 @@ const Privacy = () => {
       <div className="min-h-screen bg-modern-gray-50">
         <Header />
         
-        <div className="pt-20 pb-16">
+        <div className="pt-24 pb-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumbs */}
             <div className="mb-8">
