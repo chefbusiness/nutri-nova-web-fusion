@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface UseParallaxProps {
   speed?: number;
@@ -8,9 +9,11 @@ interface UseParallaxProps {
 
 const useParallax = ({ speed = 0.5, enabled = true }: UseParallaxProps = {}) => {
   const [offset, setOffset] = useState(0);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    if (!enabled) return;
+    // Disable parallax on mobile devices
+    if (!enabled || isMobile) return;
 
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
@@ -20,9 +23,10 @@ const useParallax = ({ speed = 0.5, enabled = true }: UseParallaxProps = {}) => 
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [speed, enabled]);
+  }, [speed, enabled, isMobile]);
 
-  return offset;
+  // Return 0 offset on mobile to disable parallax effect
+  return isMobile ? 0 : offset;
 };
 
 export default useParallax;
