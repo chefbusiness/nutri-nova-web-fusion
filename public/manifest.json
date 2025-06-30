@@ -1,0 +1,35 @@
+
+{
+  "name": "Nutinova Foods - Innovando para un Futuro Alimentario Saludable",
+  "short_name": "Nutinova Foods",
+  "description": "Empresa líder en alimentos saludables, veganos, sin gluten y sin azúcar. Innovación, sostenibilidad y bienestar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e4e7cd",
+  "theme_color": "#6ca552",
+  "orientation": "portrait-primary",
+  "categories": ["food", "health", "lifestyle"],
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/lovable-uploads/09d38c43-f4b6-425c-9720-01b46cb1a59f.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/lovable-uploads/09d38c43-f4b6-425c-9720-01b46cb1a59f.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/399fc273-cf88-4e19-a9d4-e7622dac8d07.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

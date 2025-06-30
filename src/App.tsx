@@ -10,6 +10,8 @@ import CookieBanner from "./components/CookieBanner";
 import SEOHead from "./components/SEOHead";
 import Analytics from "./components/Analytics";
 import ScrollIndicator from "./components/ScrollIndicator";
+import OfflineFallback from "./components/OfflineFallback";
+import useOnlineStatus from "./hooks/useOnlineStatus";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -25,27 +27,38 @@ const queryClient = new QueryClient({
   },
 });
 
+const AppContent = () => {
+  const isOnline = useOnlineStatus();
+
+  return (
+    <>
+      <SEOHead />
+      <Analytics />
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollIndicator />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/privacidad" element={<Privacy />} />
+          <Route path="/terminos" element={<Terms />} />
+          <Route path="/cookies" element={<Cookies />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <CookieBanner />
+        {!isOnline && <OfflineFallback />}
+      </BrowserRouter>
+    </>
+  );
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <SEOHead />
-        <Analytics />
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollIndicator />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/privacidad" element={<Privacy />} />
-            <Route path="/terminos" element={<Terms />} />
-            <Route path="/cookies" element={<Cookies />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <CookieBanner />
-        </BrowserRouter>
+        <AppContent />
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
