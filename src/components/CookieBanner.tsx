@@ -67,15 +67,15 @@ const CookieBanner = () => {
       {showBanner && (
         <div className="fixed bottom-0 left-0 right-0 z-50 animate-slide-in">
           <div className="bg-white/95 backdrop-blur-lg border-t border-modern-gray-200 shadow-2xl">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-3 sm:py-4">
+              <div className="flex flex-col gap-3 sm:gap-4">
                 {/* Contenido principal */}
-                <div className="flex items-start gap-3 flex-1">
+                <div className="flex items-start gap-2 sm:gap-3">
                   <div className="flex-shrink-0 mt-1">
-                    <Cookie className="h-6 w-6 text-nutinova-asparagus" />
+                    <Cookie className="h-5 w-5 sm:h-6 sm:w-6 text-nutinova-asparagus" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm text-modern-gray-700 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-modern-gray-700 leading-relaxed">
                       <span className="font-semibold text-modern-gray-900">🍪 Usamos cookies para mejorar tu experiencia.</span>
                       {' '}Utilizamos cookies esenciales y de análisis para personalizar contenido y entender cómo interactúas con nuestro sitio web.{' '}
                       <Link 
@@ -86,40 +86,46 @@ const CookieBanner = () => {
                       </Link>
                     </p>
                   </div>
-                </div>
-
-                {/* Botones de acción */}
-                <div className="flex items-center gap-3 flex-shrink-0">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={handleShowPreferences}
-                    className="text-modern-gray-600 hover:text-modern-gray-700 min-h-[44px]"
-                  >
-                    <Settings className="h-4 w-4 mr-2" />
-                    Personalizar
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleRejectOptional}
-                    className="border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 transition-colors min-h-[44px]"
-                  >
-                    Solo esenciales
-                  </Button>
-                  <Button
-                    onClick={handleAcceptAll}
-                    className="bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 text-white transition-colors min-h-[44px]"
-                  >
-                    Aceptar todas
-                  </Button>
+                  {/* Botón cerrar en móvil - posición fija */}
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={() => setShowBanner(false)}
-                    className="text-modern-gray-500 hover:text-modern-gray-700 hover:bg-modern-gray-100 transition-colors min-h-[44px] min-w-[44px]"
+                    className="flex-shrink-0 text-modern-gray-500 hover:text-modern-gray-700 hover:bg-modern-gray-100 transition-colors h-8 w-8 sm:h-10 sm:w-10"
                   >
-                    <X className="h-4 w-4" />
+                    <X className="h-3 w-3 sm:h-4 sm:w-4" />
+                  </Button>
+                </div>
+
+                {/* Botones de acción - Layout responsive mejorado */}
+                <div className="flex flex-col xs:flex-row gap-2 sm:gap-3">
+                  {/* Fila principal de botones */}
+                  <div className="flex flex-wrap gap-2 sm:gap-3 flex-1">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleShowPreferences}
+                      className="text-modern-gray-600 hover:text-modern-gray-700 text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9 flex-shrink-0"
+                    >
+                      <Settings className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                      Personalizar
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleRejectOptional}
+                      className="border-modern-gray-300 text-modern-gray-700 hover:bg-modern-gray-50 transition-colors text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9 flex-shrink-0"
+                    >
+                      Solo esenciales
+                    </Button>
+                  </div>
+                  
+                  {/* Botón principal - Siempre visible y destacado */}
+                  <Button
+                    onClick={handleAcceptAll}
+                    className="bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 text-white transition-colors text-xs sm:text-sm px-3 sm:px-4 h-8 sm:h-9 font-medium flex-shrink-0 w-full xs:w-auto"
+                  >
+                    Aceptar todas
                   </Button>
                 </div>
               </div>
@@ -130,34 +136,34 @@ const CookieBanner = () => {
 
       {/* Modal de preferencias detalladas */}
       <Dialog open={showPreferences} onOpenChange={setShowPreferences}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md mx-2 sm:mx-0">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-modern-gray-900">
+            <DialogTitle className="text-lg sm:text-xl font-bold text-modern-gray-900">
               Preferencias de Cookies
             </DialogTitle>
           </DialogHeader>
           
-          <div className="space-y-6">
-            <p className="text-sm text-modern-gray-600">
+          <div className="space-y-4 sm:space-y-6">
+            <p className="text-xs sm:text-sm text-modern-gray-600">
               Elige qué tipo de cookies quieres permitir. Puedes cambiar estas preferencias en cualquier momento.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {/* Cookies esenciales */}
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h4 className="font-medium text-modern-gray-900">Cookies Esenciales</h4>
+                <div className="flex-1 pr-3">
+                  <h4 className="font-medium text-modern-gray-900 text-sm sm:text-base">Cookies Esenciales</h4>
                   <p className="text-xs text-modern-gray-500">
                     Necesarias para el funcionamiento básico del sitio
                   </p>
                 </div>
-                <Switch checked={true} disabled className="ml-4" />
+                <Switch checked={true} disabled className="flex-shrink-0" />
               </div>
 
               {/* Cookies de análisis */}
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h4 className="font-medium text-modern-gray-900">Análisis</h4>
+                <div className="flex-1 pr-3">
+                  <h4 className="font-medium text-modern-gray-900 text-sm sm:text-base">Análisis</h4>
                   <p className="text-xs text-modern-gray-500">
                     Nos ayudan a entender cómo usas el sitio
                   </p>
@@ -165,14 +171,14 @@ const CookieBanner = () => {
                 <Switch 
                   checked={tempPreferences.analytics}
                   onCheckedChange={(checked) => handlePreferenceChange('analytics', checked)}
-                  className="ml-4"
+                  className="flex-shrink-0"
                 />
               </div>
 
               {/* Cookies de marketing */}
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h4 className="font-medium text-modern-gray-900">Marketing</h4>
+                <div className="flex-1 pr-3">
+                  <h4 className="font-medium text-modern-gray-900 text-sm sm:text-base">Marketing</h4>
                   <p className="text-xs text-modern-gray-500">
                     Para personalizar anuncios y contenido
                   </p>
@@ -180,14 +186,14 @@ const CookieBanner = () => {
                 <Switch 
                   checked={tempPreferences.marketing}
                   onCheckedChange={(checked) => handlePreferenceChange('marketing', checked)}
-                  className="ml-4"
+                  className="flex-shrink-0"
                 />
               </div>
 
               {/* Cookies funcionales */}
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h4 className="font-medium text-modern-gray-900">Funcionales</h4>
+                <div className="flex-1 pr-3">
+                  <h4 className="font-medium text-modern-gray-900 text-sm sm:text-base">Funcionales</h4>
                   <p className="text-xs text-modern-gray-500">
                     Mejoran la experiencia del usuario
                   </p>
@@ -195,22 +201,22 @@ const CookieBanner = () => {
                 <Switch 
                   checked={tempPreferences.functional}
                   onCheckedChange={(checked) => handlePreferenceChange('functional', checked)}
-                  className="ml-4"
+                  className="flex-shrink-0"
                 />
               </div>
             </div>
 
-            <div className="flex gap-3 pt-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2 sm:pt-4">
               <Button
                 variant="outline"
                 onClick={() => setShowPreferences(false)}
-                className="flex-1 min-h-[44px]"
+                className="h-9 sm:h-10 text-sm flex-1 order-2 sm:order-1"
               >
                 Cancelar
               </Button>
               <Button
                 onClick={handleSavePreferences}
-                className="flex-1 bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 min-h-[44px]"
+                className="h-9 sm:h-10 text-sm flex-1 bg-nutinova-asparagus hover:bg-nutinova-asparagus/90 order-1 sm:order-2"
               >
                 Guardar Preferencias
               </Button>
