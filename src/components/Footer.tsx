@@ -6,10 +6,10 @@ const Footer = () => {
 
   const links = {
     company: [
-      { name: 'Sobre Nutinova', href: '#sobre' },
-      { name: 'Nuestras Marcas', href: '#marcas' },
-      { name: 'Sostenibilidad', href: '#sostenibilidad' },
-      { name: 'Contacto', href: '#contacto' }
+      { name: 'Sobre Nutinova', href: '/#sobre' },
+      { name: 'Nuestras Marcas', href: '/#marcas' },
+      { name: 'Sostenibilidad', href: '/#sostenibilidad' },
+      { name: 'Contacto', href: '/#contacto' }
     ],
     legal: [
       { name: 'Política de Privacidad', href: '/privacidad' },
